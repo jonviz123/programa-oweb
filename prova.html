@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sistema de Avaliação Online </title>
+</head>
+<body>
+    <script> 
+  const Website = {
+    Titulo: "Sistema de Avaliação Online",
+    Url: "https://www.sistemaOnlineAv.com.br",
+    Tags : ["Biologia", "Historia", "Matemática", "Português"],
+    Distecnica: {
+        adm: ["Direito do Consumidor", "Marketing"],
+        info: [ "HTML", "PHP", "JavaScript"],
+        enf: [ "Saúde da mulher", "Primeiros socorros"]
+    },
+    escola: function() {
+        return 'EEEP Amélia Figueiredo de Lavor'
+    }
+  }
+
+  console.log(Website.Titulo);
+  console.log(Website.Url);
+  console.log(Website.Tags[2]);
+  console.log(Website.Distecnica.adm[1]);
+  console.log(Website.escola());
+
+    </script>
+</body>
+</html>

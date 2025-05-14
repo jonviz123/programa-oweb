@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Estoque </title>
+</head>
+<body> 
+<script>
+
+    const estoqueinicial = {
+     Celular: 150,
+     FonoDeOuvido: 55,
+     Pendrive: 37,
+     CaixaDeAudio: 28,
+     Tablet: 32,
+     CarregadorPortatil: 29,
+    };
+
+    const vendas = {
+     Celular: 38,
+     FonoDeOuvido: 10,
+     Pendrive: 17,
+     CaixaDeAudio: 8,
+     Tablet: 5,
+     CarregadorPortatil: 15,
+    };
+
+    const chaves = Object.keys(estoqueinicial);
+
+    console.log(estoqueinicial);
+
+    function mostrarEstoque (produtoA, produtoB) {
+        console.log("Produto A", produtoA.nome, "-", produtoA.quantidade);
+        console.log("Produto B", produtoB.nome, "-", produtoB.quantidade);
+
+    }
+
+    const Celular = { nome: "Celular", quantidade: 150};
+    const FoneDeOuvido = { nome: "Fone de ouvido", quantidade: 55};
+    const Pendrive = { nome: "Pendrive", quantidade: 37};
+    const CaixaDeAudio = { nome: "Caixa de áudio", quantidade: 28};
+    const Tablet = { nome: "Tablet", quantidade: 32};
+    const CarregadorPortatil = { nome: "Carregador portátil", quantidade: 15};
+
+    mostrarEstoque( Celular, FoneDeOuvido, Pendrive, CaixaDeAudio, Tablet, CarregadorPortatil);
+
+    const produtos = Object.keys(estoqueinicial);
+
+    let estoqueRestante = {};
+
+for (let i = 0; i < produtos.length; i++) {
+    const produto = produtos[i];
+   estoqueRestante[produto] = estoqueinicial[produto] - vendas[produto];
+}
+
+    console.log("Estoque restante após vendas:")
+    for (let i = 0; i < produtos.length; i++) {
+        const produto = produtos[i];
+        console.log(produto + ": " + estoqueRestante[produto]);
+    }
+</script>
+
+</body>
+</html>
